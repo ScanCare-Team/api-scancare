@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 const { db } = require('../config/firestore');
 
-// Endpoint untuk Registrasi
+// Registrasi
 const register = async (req, res) => {
   const { email, password, confirmPassword, name } = req.body;
 
@@ -55,7 +55,7 @@ const register = async (req, res) => {
   }
 };
 
-// Endpoint Login
+// Login
 const login = async (req, res) => {
   const { email, password } = req.body;
 
@@ -95,7 +95,7 @@ const login = async (req, res) => {
 
     const token = jwt.sign(
       { email: user.email, name: user.name },
-      process.env.JWT_SECRET, 
+      process.env.JWT_SECRET,
       { expiresIn: '1h' }
     );
 
@@ -105,7 +105,7 @@ const login = async (req, res) => {
       data: {
         email: user.email,
         name: user.name,
-        token, 
+        token,
       },
     });
   } catch (error) {
@@ -117,24 +117,24 @@ const login = async (req, res) => {
   }
 };
 
-//endpoint mengambil data user
+// Mendapatkan data pengguna
 const getUserData = async (req, res) => {
   const id = req.params.id;
   try {
-    const userSnapshot = await db.collection("users").doc(id).get();
+    const userSnapshot = await db.collection('users').doc(id).get();
     if (!userSnapshot.exists) {
       return res.status(404).json({
         status: 'fail',
-        message: 'User not found',
+        message: 'User tidak ditemukan.',
       });
     }
     const user = userSnapshot.data();
-    return res.status(200).json({
+    res.status(200).json({
       status: 'success',
       user,
     });
   } catch (error) {
-    return res.status(500).json({
+    res.status(500).json({
       status: 'error',
       message: 'Terjadi kesalahan pada server.',
       error: error.message,
@@ -142,12 +142,12 @@ const getUserData = async (req, res) => {
   }
 };
 
-// Endpoint Logout
+// Logout
 const logout = (req, res) => {
-  res.clearCookie('token'); 
+  res.clearCookie('token');
   res.status(200).json({
     status: 'success',
-    message: 'Logout successfully',
+    message: 'Logout berhasil.',
   });
 };
 
