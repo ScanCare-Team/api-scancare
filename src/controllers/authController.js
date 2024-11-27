@@ -117,38 +117,5 @@ const login = async (req, res) => {
   }
 };
 
-// Mendapatkan data pengguna
-const getUserData = async (req, res) => {
-  const id = req.params.id;
-  try {
-    const userSnapshot = await db.collection('users').doc(id).get();
-    if (!userSnapshot.exists) {
-      return res.status(404).json({
-        status: 'fail',
-        message: 'User tidak ditemukan.',
-      });
-    }
-    const user = userSnapshot.data();
-    res.status(200).json({
-      status: 'success',
-      user,
-    });
-  } catch (error) {
-    res.status(500).json({
-      status: 'error',
-      message: 'Terjadi kesalahan pada server.',
-      error: error.message,
-    });
-  }
-};
 
-// Logout
-const logout = (req, res) => {
-  res.clearCookie('token');
-  res.status(200).json({
-    status: 'success',
-    message: 'Logout berhasil.',
-  });
-};
-
-module.exports = { register, login, getUserData, logout };
+module.exports = { register, login};
