@@ -117,5 +117,73 @@ const login = async (req, res) => {
   }
 };
 
+// Update Profile
+const updateProfile = async (req, res) => {
+  const { email, fullName, oldPassword, newPassword, confirmNewPassword } = req.body;
 
-module.exports = { register, login};
+  const schema = Joi.object({
+    email: Joi.string().email().required(),
+    fullName: Joi.string().optional(),
+    oldPassword: Joi.string().optional(),
+    newPassword: Joi.string().min(6).optional(),
+    confirmNewPassword: Joi.ref('newPassword'),
+  });
+
+  const { error } = schema.validate({
+    email,
+    fullName,
+    oldPassword,
+    newPassword,
+    confirmNewPassword,
+  });
+  if (error) {
+    return res.status(400).json({
+      status: 'fail',
+      message: error.details[0].message,
+    });
+  }
+
+  try {
+    const userRef = db.collection('users').doc(email);
+    const userDoc = await userRef.get();
+
+    if (!userDoc.exists) {
+      return res.status(404).json({
+        status: 'fail',
+        message: 'Pengguna tidak ditemukan.',
+      });
+    }
+
+    const user = userDoc.data();
+
+    if (oldPassword && newPassword) {
+      const isMatch = await bcrypt.compare(oldPassword, user.password);
+      if (!isMatch) {
+        return res.status(400).json({
+          status: 'fail',
+          message: 'Password lama tidak sesuai.',
+        });
+      }
+
+      const hashedPassword = await bcrypt.hash(newPassword, 10);
+      await userRef.update({ password: hashedPassword });
+    }
+
+    if (fullName) {
+      await userRef.update({ name: fullName });
+    }
+
+    res.status(200).json({
+      status: 'success',
+      message: 'Profil berhasil diperbarui.',
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: 'error',
+      message: 'Terjadi kesalahan pada server.',
+      error: error.message,
+    });
+  }
+};
+
+module.exports = { register, login, updateProfile };
