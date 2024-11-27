@@ -2,7 +2,7 @@ const { Firestore } = require('@google-cloud/firestore');
 const path = require('path');
 require('dotenv').config();
 
-const serviceAccountPath = path.join(__dirname, '..', 'config', 'latihan-scancare-4762a043bc70.json');
+const serviceAccountPath = path.join(__dirname, '..', 'config', 'project-scancare-3455aa2c9529.json');
 
 
 const db = new Firestore({
