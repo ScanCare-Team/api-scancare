@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8000
 
 # Jalankan aplikasi
-CMD ["node", "app.js"]
+CMD ["npm", "start"]
