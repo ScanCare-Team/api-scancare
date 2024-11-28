@@ -13,8 +13,9 @@ RUN npm install
 # Salin semua file proyek
 COPY . .
 
+ENV PORT 800
 # Expose port
-EXPOSE 8000
+EXPOSE ${PORT}
 
 # Jalankan aplikasi
 CMD ["npm", "start"]
