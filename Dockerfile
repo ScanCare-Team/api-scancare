@@ -2,7 +2,7 @@
 FROM node:14
 
 # Tentukan direktori kerja di dalam container
-WORKDIR /usr/src
+WORKDIR /src/app
 
 # Salin file package.json dan package-lock.json
 COPY package*.json ./
