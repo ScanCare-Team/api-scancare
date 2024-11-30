@@ -2,8 +2,9 @@ const { Firestore } = require('@google-cloud/firestore');
 const path = require('path');
 require('dotenv').config();
 
-const serviceAccountPath = path.join(__dirname, '..', 'config', 'project-scancare-3455aa2c9529.json');
+//const serviceAccountPath = path.join(__dirname, '..', 'config', 'project-scancare-3455aa2c9529.json');
 //const serviceAccountPath = '/secrets/service-account.json';
+const serviceAccountPath = process.env.FIREBASE_KEY_FILE_PATH;
 
 const db = new Firestore({
   projectId: process.env.FIREBASE_PROJECT_ID,
