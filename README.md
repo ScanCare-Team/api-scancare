@@ -88,8 +88,7 @@
 | fullName                | string  | Optional, new name                        |
 | oldPassword             | string  | optional, current password                |
 | newPassword             | string  | Optional, new password, min 6 chars       |
-| confirmPassword         | string  | Must match password                       |
-| confirmNewPassword      | string  | User's name                               |
+| confirmNewPassword      | string  | Must match newPassword                    |
 
 ### Success Response:
 ```` json
