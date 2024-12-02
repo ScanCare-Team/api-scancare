@@ -1,8 +1,8 @@
 # API Documentation – Authentication
 
 ### NOTE:
-•	All url need bearer token expect
-•	 All `Content-Type` headers should be `application/json`.
+- All url need bearer token expect
+-	 All `Content-Type` headers should be `application/json`.
 
 ---
 
