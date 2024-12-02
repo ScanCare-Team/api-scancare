@@ -79,7 +79,7 @@
 }
 ```` 
 
-## 2. Update Profile
+## 3. Update Profile
 **Method:**  
 `PUT {{url}}/api/auth/user/profile`
 | Parameter               | Type    | Description                               |
