@@ -17,23 +17,29 @@
 | Name            | string  | User's name                 |
 
 ### Success Response:
+```` json
 {
   "status": "success",
   "message": "Pendaftaran berhasil."
 }
+````
 
 ### 400 Bad Request
+```` json
 {
   "status": "fail",
   "message": "Error validasi (contoh: Email tidak valid)."
 }
+````
 
 ### Error Response:
+```` json
 {
   "status": "error",
   "message": "Terjadi kesalahan pada server.",
   "error": "Detail error"
 }
+````
 
 ## 2. User Login
 **Method:**  
@@ -44,6 +50,7 @@
 | Password        | string  | Required, Min. 6 characters |
 
 ### Success Response:
+```` json
 {
   "status": "success",
   "message": "Login berhasil.",
@@ -53,24 +60,28 @@
     "token": "string (JWT token)"
   }
 }
+````
 
 ### 400 Bad Request
+```` json
 {
   "status": "fail",
   "message": "Password salah atau validasi gagal."
 }
+````
 
 ### Error Response:
+```` json
 {
   "status": "error",
   "message": "Terjadi kesalahan pada server.",
   "error": "Detail error"
 }
+```` 
 
 ## 2. Update Profile
 **Method:**  
 `PUT {{url}}/api/auth/user/profile`
-
 | Parameter               | Type    | Description                               |
 |-------------------------|---------|-------------------------------------------|
 | Email                   | string  | Valid email                               |
@@ -81,14 +92,18 @@
 | confirmNewPassword      | string  | User's name                               |
 
 ### Success Response:
+```` json
 {
   "status": "success",
   "message": "Profil berhasil diperbarui."
 } 
+````
 
 ### Error Response:
+```` json
 {
   "status": "error",
   "message": "Terjadi kesalahan pada server.",
   "error": "Detail error"
 }
+````
