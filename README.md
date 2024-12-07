@@ -92,7 +92,7 @@
   "status": "success",
   "user": {
     "email": "example@gmail.com",
-    "name": "Asrini Muhsin",
+    "name": "example",
     "createdAt": {
       "_seconds": 1732698928,
       "_nanoseconds": 7000000
