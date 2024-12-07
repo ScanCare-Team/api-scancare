@@ -133,6 +133,36 @@ const login = async (req, res) => {
   }
 };
 
+// Get user data by email
+const getUserData = async (req, res) => {
+  const { email } = req.params;
+  try {
+    const userRef = db.collection('users').doc(email.toLowerCase());
+    const userDoc = await userRef.get();
+
+    if (!userDoc.exists) {
+      return res.status(404).json({
+        status: 'fail',
+        message: 'Pengguna tidak ditemukan.',
+      });
+    }
+
+    const user = userDoc.data();
+    delete user.password;
+
+    return res.status(200).json({
+      status: 'success',
+      user,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      status: 'error',
+      message: 'Terjadi kesalahan pada server.',
+      error: error.message,
+    });
+  }
+};
+
 // Update Profil
 const updateProfile = async (req, res) => {
   const { email, fullName, oldPassword, newPassword, confirmNewPassword } = req.body;
@@ -211,4 +241,4 @@ const updateProfile = async (req, res) => {
   }
 };
 
-module.exports = { register, login, updateProfile };
+module.exports = { register, login, updateProfile, getUserData };
