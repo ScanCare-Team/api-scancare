@@ -93,11 +93,25 @@
   "user": {
     "email": "example@gmail.com",
     "name": "example",
-    "createdAt": {
-      "_seconds": 1732698928,
-      "_nanoseconds": 7000000
-    }
+    "createdAt": "2023-10-12T10:00:00.007Z"
   }
+}
+````
+
+### 404 Not Found:
+```` json
+{
+  "status": "fail",
+  "message": "Pengguna tidak ditemukan."
+}
+````
+
+### Error Response:
+```` json
+{
+  "status": "error",
+  "message": "Terjadi kesalahan pada server.",
+  "error": "error_message_here"
 }
 ````
 
