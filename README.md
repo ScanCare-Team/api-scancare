@@ -79,8 +79,29 @@
   "error": "Detail error"
 }
 ```` 
+## 3. Get User Data by Email
+**Method:**  
+`POST {{url}}/api/auth/user/{email}`
+| Parameter       | Type    | Description                                                                  |
+|-----------------|---------|------------------------------------------------------------------------------|
+| Email           | string  | The email of the user whose data is to be fetched. The email should be in a valid format.|
 
-## 3. Update Profile
+### Success Response:
+```` json
+{
+  "status": "success",
+  "user": {
+    "email": "example@gmail.com",
+    "name": "Asrini Muhsin",
+    "createdAt": {
+      "_seconds": 1732698928,
+      "_nanoseconds": 7000000
+    }
+  }
+}
+````
+
+## 4. Update Profile
 **Method:**  
 `PUT {{url}}/api/auth/user/profile`
 | Parameter               | Type    | Description                               |
