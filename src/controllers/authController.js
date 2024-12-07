@@ -150,6 +150,10 @@ const getUserData = async (req, res) => {
     const user = userDoc.data();
     delete user.password;
 
+    if (user.createdAt) {
+      user.createdAt = user.createdAt.toDate().toISOString();
+    }
+
     return res.status(200).json({
       status: 'success',
       user,
