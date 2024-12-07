@@ -81,7 +81,7 @@
 ```` 
 ## 3. Get User Data by Email
 **Method:**  
-`POST {{url}}/api/auth/user/{email}`
+`GET {{url}}/api/auth/user/{email}`
 | Parameter       | Type    | Description                                                                  |
 |-----------------|---------|------------------------------------------------------------------------------|
 | Email           | string  | The email of the user whose data is to be fetched. The email should be in a valid format.|
