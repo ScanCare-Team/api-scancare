@@ -165,10 +165,8 @@ We have deployed the API in our project using the Cloud Run service on the Googl
 
 ---
 ## Cloud Services Used
-- Database
-![Firebase]()
-- Deployment
-![Cloud Run]()
+![Cloud Service used]()
+
 
 ## Autors
 - [@Asrin111](https://github.com/orgs/ScanCare-Team/people/Asrin111)
