@@ -1,10 +1,10 @@
 # Scancare API
-##Cloud Architecture
+## Cloud Architecture
 ![Cloud Arsitekture](https://github.com/ScanCare-Team/.github/blob/main/assets/Arsitektur%20Backend.drawio.png)
 
 ---
 
-##Get Started
+## Get Started
 ---
 Clone **repository** with command:
 ```` json
