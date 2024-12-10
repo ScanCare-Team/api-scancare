@@ -4,6 +4,13 @@
 
 ---
 
+### Get Started
+---
+
+```` json
+https://github.com/ScanCare-Team/api-scancare
+````
+
 # API Documentation – Authentication
 
 ### NOTE:
