@@ -156,3 +156,13 @@ https://github.com/ScanCare-Team/api-scancare
   "error": "Detail error"
 }
 ````
+---
+
+##Link
+----
+We have deployed the API in our project using the Cloud Run service on the Google Cloud Platform. Here are two links to the results of the deployment:
+- Backend URL : [Backendurl](https://api-scancare1-173910592123.asia-southeast2.run.app)
+- Flask-App URL : [Flask-App](https://api-scancare-model-ml2-173910592123.asia-southeast2.run.app)
+
+---
+  
