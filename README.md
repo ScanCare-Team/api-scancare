@@ -11,7 +11,7 @@ Clone **repository** with command:
 https://github.com/ScanCare-Team/api-scancare
 ````
 
-# API Documentation – Authentication
+## API Documentation – Authentication
 
 ### NOTE:
 - All url need bearer token expect
@@ -158,10 +158,19 @@ https://github.com/ScanCare-Team/api-scancare
 ---
 
 ## Link
-----
+---
 We have deployed the API in our project using the Cloud Run service on the Google Cloud Platform. Here are two links to the results of the deployment:
 - Backend URL : https://api-scancare1-173910592123.asia-southeast2.run.app
 - Flask-App URL : https://api-scancare-model-ml2-173910592123.asia-southeast2.run.app
 
 ---
+## Cloud Services Used
+- Database
+![Firebase]()
+- Deployment
+![Cloud Run]()
+
+## Autors
+- [@Asrin111](https://github.com/orgs/ScanCare-Team/people/Asrin111)
+- [@dindaa06](https://github.com/orgs/ScanCare-Team/people/dindaa06)
   
