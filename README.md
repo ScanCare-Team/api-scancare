@@ -4,7 +4,7 @@
 
 ---
 
-### Get Started
+## Get Started
 ---
 
 Clone **repository** with command:
