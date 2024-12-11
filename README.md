@@ -1,6 +1,6 @@
 # Scancare API
 ## Cloud Architecture
-![Cloud Arsitekture](https://github.com/ScanCare-Team/.github/blob/main/assets/Arsitektur%20Backend.drawio.png)
+![Cloud Arsitekture](https://github.com/ScanCare-Team/.github/blob/main/assets/Arsitektur%20Backend.drawio%20(1).png)
 
 ---
 
