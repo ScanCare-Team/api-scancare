@@ -161,7 +161,7 @@ https://github.com/ScanCare-Team/api-scancare
 ---
 We have deployed the API in our project using the Cloud Run service on the Google Cloud Platform. Here are two links to the results of the deployment:
 - Backend URL : https://api-scancare1-173910592123.asia-southeast2.run.app
-- Flask-App URL : https://api-scancare-model-ml2-173910592123.asia-southeast2.run.app
+- Backend for Model ML deployed URL : https://api-scancare-model-ml2-173910592123.asia-southeast2.run.app
 
 ---
 ## Cloud Services Used
