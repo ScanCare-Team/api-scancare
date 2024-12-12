@@ -168,7 +168,7 @@ We have deployed the API in our project using the Cloud Run service on the Googl
 ![Cloud Service used](https://github.com/ScanCare-Team/.github/blob/main/assets/cloud.png)
 
 
-## Autors
+## Authors
 - [@Asrin111](https://github.com/orgs/ScanCare-Team/people/Asrin111)
 - [@dindaa06](https://github.com/orgs/ScanCare-Team/people/dindaa06)
   
